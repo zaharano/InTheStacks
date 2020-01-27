@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end reset */
+
+
+html {
+    background: rgb(116,35,0);
+    background: linear-gradient(0deg, rgba(116,35,0,1) 0%, rgba(156,44,0,1) 15%, rgba(217,74,12,1) 100%);
+    font-size: 16px;
+    font-family: Palatino, Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
+}
+
+* {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: lightseagreen;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+button:active {
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(31, 156, 150);
+}
+
+button.cancel {
+    background-color: rgb(255, 127, 54);
+}
+
+button.cancel:hover {
+    background-color: rgb(221, 109, 45);
+}
+
+.container h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0 0 .5rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="radio"] {
+    vertical-align: text-top;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#book-container {
+    width: 100%;
+    display: grid;
+    grid: auto-flow / 1fr 1fr 1fr;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    height: auto;
+    width: 800px;
+    margin: 4rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgb(143, 98, 77);
+    box-shadow: 0 5px 50px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-card {
+    padding: 1.5rem;
+    margin: .5rem .5rem;
+    background-color: rgb(255, 248, 239);
+    border-radius: 10px;
+    position: relative;
+}
+
+.book-card p {
+    margin: .2rem 0;
+}
+
+.book-card button {
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 10px;
+    border-radius: 50px;
+    padding: 2px 10px;
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+    
+.book-card button:active {
+    border: 1px solid rgba(0,0,0,0.0);
+}
+
+.yep {
+    border: 1px solid lightseagreen;
+    color: lightseagreen;
+}
+
+.yep:hover {
+    color: white;
+    background-color: lightseagreen;
+}
+
+.nope {
+    border: 1px solid rgb(221, 109, 45);
+    color: rgb(221, 109, 45);
+}
+
+.nope:hover {
+    color: white;
+    background-color: rgb(221, 109, 45);
+}
+
+button.remove {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin: 0;
+}
+
+
