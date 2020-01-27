@@ -1,23 +1,31 @@
+"use strict";
 // hook up new book
 // hook up destory
 // hook up read control
-// hook up localstorage
 // that's it?
 
-let myLibrary = [];
-let library = document.querySelector('#book-container')
+const myLibrary = [];
 
-const hobbit = new Book("The Hobbit","J.R.R. Tolkien", 486, true)
-const waters = new Book(' Chez Panisse Menu Cookbook', 'Alice Waters', 215, false)
+// if local library data exists, populate array with books from data
+if (localStorage.getItem('myLibrary')) {
+    let storedData = JSON.parse(localStorage.getItem('myLibrary'));
+    for (let book of storedData) {
+        // data is object, .values is an array, spread to constructor
+        myLibrary.push(new Book(...Object.values(book)))
+    }
+}
 
-myLibrary.push(hobbit);
-myLibrary.push(waters);
-myLibrary.push(hobbit);
-myLibrary.push(waters);
-myLibrary.push(hobbit);
-myLibrary.push(waters);
-myLibrary.push(hobbit);myLibrary.push(hobbit);
+// if there is no stored library, on load create example books
+if (!myLibrary.length) {
+    const hobbit = new Book("The Hobbit","J.R.R. Tolkien", 486, true)
+    const waters = new Book('Chez Panisse Menu Cookbook', 'Alice Waters', 215, false)
+    myLibrary.push(hobbit);
+    myLibrary.push(waters);
+}
 
+render()
+
+// constructor
 function Book(title, author, numPages, read) {
     this.title = title
     this.author = author
@@ -36,14 +44,22 @@ function Book(title, author, numPages, read) {
     }
 }
 
+function bookSubmit(){
+    // let dataValues = query(inputs).values
+    const newBook = new Book(title, author, numPages, read);
+    myLibrary.push(newBook);
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+}
+
+
 function render(){
+    let libView = document.querySelector('#book-container')
     for (let book of myLibrary) {
         let newBook = document.createElement('div');
         newBook.classList.add('book-card');
         // card needs an id 
         newBook.innerHTML = book.info();
-        library.appendChild(newBook);
+        libView.appendChild(newBook);
     }
 }
 
-render()
