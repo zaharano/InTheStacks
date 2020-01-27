@@ -1,8 +1,4 @@
 "use strict";
-// hook up new book
-// hook up destory
-// hook up read control
-// that's it?
 
 const myLibrary = [];
 
