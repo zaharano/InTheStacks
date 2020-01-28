@@ -18,4 +18,4 @@ Built as part of the Odin Project curriculum.
 * [ ] Ratings
 * [ ] Reading 'playlist' - Stack to sort what's up next - reorderable
 * [ ] Provide counts of various things (books by genre, avg page count, etc etc)
-* [ ] Make page count not required cause that's a silly thing to record
+* [ ] Make page count not required cause that's a silly thing to record (handle omission)
