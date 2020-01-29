@@ -68,6 +68,7 @@ body {
     align-items: center;
 }
 
+/* refactor selectors so you don't need classes on book-card buttons */
 button {
     background-color: lightseagreen;
     color: white;
@@ -145,14 +146,14 @@ label {
     grid: auto-flow / 1fr 1fr 1fr;
 }
 
-.overlay {
+#overlay {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,0.5);
-    z-index: 2;
+    z-index: 1000;
 }
 
 .hide {

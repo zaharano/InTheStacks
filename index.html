@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Library</title>
-</head>
-<body>
-    <div class="overlay hide">
-        <div class="container">
-            <h1>Add a Book</h1>
-            <form name="new">
-                <input type="text" name="title" id="title" placeholder="Title" required>
-                <input type="text" name="author" id="author" placeholder="Author" required>
-                <input type="number" name="pages" id="pages" placeholder="Pages" required>
-                <fieldset>
-                    <input type="radio" name="read" id="yep"> <label for="yep">Read</label>
-                    <input type="radio" name="read" id="nope"> <label for="nope">Not Read</label>
-                </fieldset>
-                <fieldset>
-                    <button>Submit</button>
-                    <button class="cancel">Cancel</button>
-                </fieldset>
-                
-            </form>
-        </div>
+  </head>
+  <body>
+    <div id="overlay" class="hide">
+      <div class="container">
+        <h1>Add a Book</h1>
+        <form id="new">
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            required
+          />
+          <input
+            type="text"
+            name="author"
+            placeholder="Author"
+            required
+          />
+          <input
+            type="number"
+            name="pages"
+            placeholder="Pages"
+            required
+          />
+          <fieldset required>
+            <input type="radio" name="read" id="yep" checked />
+            <label for="yep">Read</label>
+            <input type="radio" name="read" id="nope" />
+            <label for="nope">Not Read</label>
+          </fieldset>
+          <fieldset>
+            <button type="submit">Submit</button>
+            <button class="cancel">Cancel</button>
+          </fieldset>
+        </form>
+      </div>
     </div>
     <div class="container">
-        <h1>&nbsp; My Library &nbsp;</h1>
-        <button>Add a Book</button>
-        <div id="book-container">
-            
-        </div>
+      <h1>&nbsp; My Library &nbsp;</h1>
+      <button id="add-book">Add a Book</button>
+      <div id="book-container"></div>
     </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

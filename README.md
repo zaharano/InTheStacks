@@ -4,15 +4,14 @@ Built as part of the Odin Project curriculum.
 
 
 **Todos**
-* [ ] hook up new book
-* [ ] hook up destory
-* [ ] hook up read control
+* [x] hook up new book
+* [x] hook up destory
+* [x] hook up read control
 
 
 **Want to take it further?**
 * [ ] Implement Firebase
-* [ ] Turn myLibrary into an object (that contains the book array) that extends book
-* [ ] Push becomes a shelve function that constructs a book and sorts it in
+* [ ] Push becomes a shelve method that sorts it in
 * [ ] Sort by various parameters (title, author)
 * [ ] Genre tags
 * [ ] Ratings
